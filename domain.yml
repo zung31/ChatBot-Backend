@@ -1,0 +1,155 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_happy
+  - mood_unhappy
+  - mood_great
+  - bot_challenge
+  - introduce_self
+  - show_more
+  - personal
+  - adresse
+  - phone_number
+  - contact
+  - origin
+  - opportunity
+  - achieve
+  - skills
+  - project
+  - experience
+  - fallback
+  - domain
+  - projetdetail
+  - mobilite
+  - drive
+  - formation
+  - tempFrance
+
+slots:
+  language:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+  user_language:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+  - text: "Salut! Comment ça va?" 
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+  - text: "Est-ce que cela vous a aidé?"
+
+  utter_goodbye:
+  - text: "Nice to chat with you. If you have any further questions, please feel free to ask me."
+  - text: "Ravi de discuter avec vous. Si vous avez d'autres questions, n'hésitez pas à me les poser."
+
+  utter_happy:
+  - text: "That's great to hear!"
+  - text: "C'est génial à entendre!"
+
+  utter_unhappy:
+  - text: "I'm sorry. Please let me know how I can help."
+  - text: "Désolé. Dites-moi comment je peux vous aider."
+
+  utter_iamabot:
+  - text: "I am Mini Hoang, powered by Rasa."
+  - text: "Je suis Mini Hoang, propulsé par Rasa."
+
+  utter_present:
+  - text: "My name is Hoang. I am a 3rd year CS student at UPHF. I can work with multiple languages ​​and have the ability to build project structures."
+  - text: "Je m'appelle Hoang. Je suis étudiant en informatique de 3ème année à l'UPHF. Je peux travailler avec plusieurs langues et avoir la capacité de construire des structures de projet."
+
+  utter_show_more:
+  - text: "I mainly work with Java, JS and Node JS, Python, C/C++, SQL, PHP, HTML, CSS,.. To learn more go to my Competences section."
+  - text: "Je travaille principalement avec Java, JS et Node JS, Python, C/C++, SQL, PHP, HTML, CSS,.. Pour en savoir plus, allez à ma section Compétences."
+
+  utter_personal:
+  - text: "Sorry that information is too personal. But we can discuss about it if you write me an email."
+  - text: "Désolé, cette information est trop personnelle. Mais nous pouvons en discuter si vous m'écrivez un email."
+
+  utter_adresse:
+  - text: "My address is Aulnoy-lez-Valenciennes 59300, Hauts-de-France, France."
+  - text: "Mon adresse est Aulnoy-lez-Valenciennes 59300, Hauts-de-France, France."
+
+  utter_phone:
+  - text: "My phone number is 0622620180. Methods to contact me are in the footer or you can go to the contact page."
+  - text: "Mon numéro téléphone est 0622620180. Les méthodes pour me contacter sont dans le pied de page ou vous pouvez vous rendre sur la page contact."
+
+  utter_contact:
+  - text: "Methods to contact me are in the footer or you can go to the contact page."
+  - text: "Les méthodes pour me contacter sont dans le pied de page ou vous pouvez vous rendre sur la page contact."
+
+  utter_origin:
+  - text: "I'm from Hanoi, Vietnam. I went to France to study at university and work."
+  - text: "Je viens de Hanoï, au Vietnam. Je suis allé en France pour étudier à l'université et travailler."
+
+  utter_opportunity: 
+  - text: "I am looking for an internship starting from March/2025. Minimum duration is 10 weeks, maximum is until the end of August/2025. I can work in most areas, my strongest area would be Web and Applications"
+  - text: "Je recherche un poste de stage à partir de mars de l'année prochaine. La durée minimale est de 10 semaines, le maximum est jusqu'à fin août. Je peux travailler dans la plupart des domaines, mes domaines les plus marquants seront le Web et les applications."
+
+  utter_achieve:
+  - text: "I have very good academic results, not only in France but also in Vietnam, I am always in the top of the class and get Tres Bien. I am also highly appreciated at work, participating in coding important areas in the company. If you give me a chance, I will definitely not disappoint you."
+  - text: "J'ai de très bons résultats académiques, non seulement en France mais aussi au Vietnam, je suis toujours dans les premiers de la classe et j'ai obtenu Très Bien. Je suis également très apprécié lorsque je vais travailler et que je participe au codage dans des domaines importants de l'entreprise. Si vous me donnez une chance, je ne vous décevrai certainement pas."
+
+  utter_skills:
+  - text: "In addition to coding skills, I also have skills in teamwork, reporting, responsibility, productivity and continuous learning."
+  - text: "En plus des compétences en codage, j'ai également des compétences en travail d'équipe, en reporting, en responsabilité, en productivité et en apprentissage continu."
+
+  utter_project:
+  - text: "I have participated in many projects, from small to large, from personal to group projects. I have experience in building websites, applications, and games, with Java, JS, Python, C/C++, SQL, PHP, HTML, CSS,..You can learn more in the Projects section."
+  - text: "J'ai participé à de nombreux projets, des petits aux grands, de personnels aux projets de groupe. J'ai de l'expérience dans la construction de sites Web, d'applications et de jeux, avec Java, JS, Python, C/C++, SQL, PHP, HTML, CSS,..Vous pouvez en savoir plus dans la section Projets." 
+  
+  utter_experience:
+  - text: "I did an internship in the summer of 2024 as a Full Stack Developer. I mainly worked with Angular, PHP, JS and WordPress. I participated in many projects and learned a lot. I also worked as a waiter. If you want to know more, you can go to the Info section in About me."
+  - text: "J'ai fait un stage en été 2024 en tant que Développeur Full Stack. J'ai principalement travaillé avec Angular, PHP, JS et WordPress. J'ai participé à de nombreux projets et j'ai beaucoup appris. J'ai également travaillé en tant que serveur. Si vous voulez en savoir plus, vous pouvez aller dans la section Info dans À propos."
+
+  utter_domain:
+  - text: "I am most confident in Web and Application programming. But the truth is I can do anything, as long as the company requires it :D"
+  - text: "Je suis le plus confiant dans la programmation Web et Application. Mais la vérité est que je peux tout faire, tant que l'entreprise le demande :D"
+  
+  utter_projetdetail:
+  - text: "Probably the most multi-tasking project I've ever worked on is the website you're looking at, but I've had other projects, one of my favorites was using Java Spring Boot as a back end and ReactJS as a front end to create quizzes and answer them. You can see more in my Projects section."
+  - text: "Le plus gros projet sur lequel j'ai jamais travaillé est probablement le site Web que vous consultez. Mais j'ai aussi d'autres projets, il y a un projet que j'aime beaucoup lorsque j'utilise Java Spring Boot car ReactJS est ReactJS pour créer des quiz et y répondre. Vous pouvez en voir plus dans ma section Projets."
+
+  utter_mobilite:
+  - text: "I am available to work all over France, and in other countries in Europe. I am also available to work remotely."
+  - text: "Je suis disponible pour travailler partout en France, et dans d'autres pays en Europe. Je suis également disponible pour travailler à distance."
+
+  utter_drive:
+  - text: "I don't have a driver's licence. But i don't mind taking public transport or walking to work."
+  - text: "Je n'ai pas de permis B. Mais cela ne me dérange pas de prendre les transports en commun ou de marcher pour aller travailler."
+
+  utter_formation:
+  - text: "I am currently studying Computer Science at UPHF. I have a good academic record and am always in the top of the class. I am also a member of the UPHF Badminton Club."
+  - text: "Je suis actuellement étudiante en informatique à l'UPHF. J'ai un bon dossier académique et je suis toujours dans les premiers de la classe. Je suis également membre du Club de Badminton de l'UPHF."
+  
+  utter_tempFrance:
+  - text: "I have studied and worked in France for nearly 3 years. I can speak and work well in both French and English. I have obtained B2 in French and English (940 TOEIC)"
+  - text: "J'étudie et travaille en France depuis près de 3 ans. Je peux parler et bien travailler en français et en anglais. J'ai obtenu le B2 en français et en anglais (940 TOEIC)"
+  
+  utter_default:
+  - text: "I'm sorry, I didn't get that. Can you rephrase?"
+  - text: "Désolé, je n'ai pas compris. Pouvez-vous reformuler?"
+
+  utter_default2:
+  - text: "Sorry for the inconvenience. Feel free to leave me a message via email or contact page so we can chat more."
+  - text: "Nous sommes vraiment désolés pour cet inconvénient. N'hésitez pas à me laisser un message par email ou via la page contact afin que nous puissions discuter davantage."
+
+actions:
+  - action_set_language
+  - action_default_fallback
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,127 @@
+version: "3.1"
+
+stories:
+
+- story: set language
+  steps:
+  - action: action_set_language
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: introduce path
+  steps:
+  - intent: introduce_self
+  - action: utter_present
+
+- story: show more path
+  steps:
+  - intent: show_more
+  - action: utter_show_more
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: contact path
+  steps:
+  - intent: contact
+  - action: utter_contact
+
+- story: personal path
+  steps:
+  - intent: personal
+  - action: utter_personal
+
+- story: adresse path
+  steps:
+  - intent: adresse
+  - action: utter_adresse
+
+- story: phone_number path
+  steps:
+  - intent: phone_number
+  - action: utter_phone
+
+- story: origin path
+  steps:
+  - intent: origin
+  - action: utter_origin
+
+- story: opportunity path
+  steps:
+  - intent: opportunity
+  - action: utter_opportunity
+
+- story: achieve path
+  steps:
+  - intent: achieve
+  - action: utter_achieve
+
+- story: skills path
+  steps:
+  - intent: skills
+  - action: utter_skills
+
+- story: project path
+  steps:
+  - intent: project
+  - action: utter_project
+
+- story: experience path
+  steps:
+  - intent: experience
+  - action: utter_experience
+
+- story: fallback path
+  steps:
+  - intent: fallback
+  - action: action_default_fallback
+
+- story: domain path
+  steps:
+  - intent: domain
+  - action: utter_domain
+
+- story: projetdetail path
+  steps:
+  - intent: projetdetail
+  - action: utter_projetdetail
+
+- story: mobilite path
+  steps:
+  - intent: mobilite
+  - action: utter_mobilite
+
+- story: drive path
+  steps:
+  - intent: drive
+  - action: utter_drive
+
+- story: formation path
+  steps:
+  - intent: formation
+  - action: utter_formation
+
+- story: tempFrance path
+  steps:
+  - intent: tempFrance
+  - action: utter_tempFrance
