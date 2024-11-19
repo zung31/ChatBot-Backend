@@ -28,23 +28,51 @@ intents:
   - drive
   - formation
   - tempFrance
+  - weekend
+  - age
+  - favSubject
+  - respondgreet
+  - find_most_similar_intent
+  - set_language
+  - non_remunere
+  - lieu_travail
+  - creneau_dispo
+
+entities:
+  - tu
+  - ton
+  - as
+  - est
+  - stage
+  - faire
+  - compétences
+  - projet
+  - experience
+  - peux
+  - user_language
 
 slots:
   language:
     type: text
     influence_conversation: false
     mappings:
-      - type: from_text
+      - type: from_entity
+        entity: user_language
   user_language:
     type: text
     influence_conversation: false
     mappings:
-      - type: from_text
+      - type: from_entity
+        entity: user_language
 
 responses:
   utter_greet:
   - text: "Hey! How are you?"
   - text: "Salut! Comment ça va?" 
+  
+  utter_respondgreet:
+  - text: "I'm fine, thank you. How can I help you?"
+  - text: "Je vais bien, merci. Comment puis-je vous aider?"
 
   utter_did_that_help:
   - text: "Did that help you?"
@@ -138,6 +166,18 @@ responses:
   - text: "I have studied and worked in France for nearly 3 years. I can speak and work well in both French and English. I have obtained B2 in French and English (940 TOEIC)"
   - text: "J'étudie et travaille en France depuis près de 3 ans. Je peux parler et bien travailler en français et en anglais. J'ai obtenu le B2 en français et en anglais (940 TOEIC)"
   
+  utter_weekend:
+  - text: "I am available to work on weekends, but I prefer to work on weekdays."
+  - text: "Je suis disponible pour travailler le week-end, mais je préfère travailler en semaine."
+
+  utter_age:
+  - text: "I am 20 years old."
+  - text: "J'ai 20 ans."
+
+  utter_favSubject:
+  - text: "My favorite subject is Software Development. I'm always excited to learn new things. And math is also in my list :)."
+  - text: "Mon sujet préféré est le Développement Logiciel. Je suis toujours excité d'apprendre de nouvelles choses. Et les mathématiques sont également dans ma liste :)."
+
   utter_default:
   - text: "I'm sorry, I didn't get that. Can you rephrase?"
   - text: "Désolé, je n'ai pas compris. Pouvez-vous reformuler?"
@@ -146,9 +186,24 @@ responses:
   - text: "Sorry for the inconvenience. Feel free to leave me a message via email or contact page so we can chat more."
   - text: "Nous sommes vraiment désolés pour cet inconvénient. N'hésitez pas à me laisser un message par email ou via la page contact afin que nous puissions discuter davantage."
 
+  utter_non_remunere:
+  - text: "I could do an unpaid internship for 8 weeks. It's good to learn and gain experience."
+  - text: "Je pourrais faire un stage non rémunéré de 8 semaines. C'est bien pour apprendre et acquérir de l'expérience."
+
+  utter_lieu_travail:
+  - text: "I am available to work in all cities in France and in other countries. I am also available to work remotely."
+  - text: "Je suis disponible pour travailler dans toutes les villes de France et dans d'autres pays. Je suis également disponible pour travailler à distance."
+
+  utter_creneau_dispo:
+  - text: "I am available to discuss everytime. You just neeed to send me a message via Contact. Thank you."
+  - text: "Je suis disponible pour discuter à tout moment. Vous avez juste besoin de m'envoyer un message via Contact. Merci."
+
 actions:
   - action_set_language
+  - action_find_most_similar_intent
   - action_default_fallback
+  - action_greet
+  - action_goodbye
 
 session_config:
   session_expiration_time: 60

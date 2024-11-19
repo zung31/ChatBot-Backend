@@ -1,0 +1,458 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - salut
+    - bonjour
+    - coucou
+    - bonsoir
+    - bon après-midi
+    - bon matin
+- intent: respondgreet
+  examples: |
+    - vais bien . ?
+    - vais bien . ?
+    - vais bien merci . ?
+- intent: goodbye
+  examples: |
+    - cu
+    - revoir
+    - plus tard
+    - bonne nuit
+    - bye
+    - goodbye
+    - passe bonne journée
+    - bientôt
+    - bye bye
+    - plus
+    - prochaine
+    - bien
+    - bon
+    - merci
+- intent: affirm
+  examples: |
+    - oui
+    - ouais
+    - bien sûr
+    - ça va
+    - correct
+- intent: deny
+  examples: |
+    - non
+    - jamais
+    - pense
+    - n'aime ça
+    - tout
+    - vraiment
+- intent: mood_great
+  examples: |
+    - parfait
+    - super
+    - incroyable
+    - merveilleux
+    - sen très bien
+    - vais bien
+    - incroyable
+    - super excité
+    - extrêmement bien
+    - tellement bien
+    - tellement parfait
+- intent: mood_unhappy
+  examples: |
+    - désolé
+    - vais bien
+    - bien
+    - content
+    - triste
+    - malheureux
+    - déprimé
+    - déprimée
+    - mal
+    - bien
+    - content
+    - heureux
+    - contente
+    - heureuse
+- intent: mood_happy
+  examples: |
+    - heureux
+    - sen heureux
+    - très heureux
+    - content
+    - très content
+    - très contente
+- intent: bot_challenge
+  examples: |
+    - es-tu bot ?
+    - es-tu robot ?
+    - es-tu machine ?
+    - es-tu humain ?
+    - es-tu personne ?
+    - es-tu personne réelle ?
+    - es-tu personne humaine ?
+- intent: introduce_self
+  examples: |
+    - Présentez-vous
+    - présentez-vous
+    - es-tu ?
+    - parle-moi
+    - peux-tu présenter ?
+    - êtes-vous ?
+    - parlez-moi
+    - comment appelez-vous ?
+- intent: show_more
+  examples: |
+    - quels langages programmation connaissez-vous ?
+    - sais-tu faire ?
+    - savez-vous faire ?
+    - quelles compétences ?
+    - quoi es-tu capable ?
+    - quoi êtes-vous capable ?
+    - quels talent ?
+    - dis-m'en plus
+    - dis-m'en plus compétences
+    - quels atouts ?
+    - quels point fort ?
+- intent: personal
+  examples: |
+    - où famille ?
+    - montre-moi comptes réseaux sociaux
+    - avez-vous enfants ?
+    - quel salaire souhaité ?
+    - combien gagnes-tu ?
+    - combien veux-tu gagner ?
+    - salaire
+- intent: adresse
+  examples: |
+    - quelle adresse ?
+    - où habitez-vous ?
+    - où êtes-vous situé ?
+    - où trouve domicile ?
+    - quelle localisation ?
+- intent: origin
+  examples: |
+    - d'où venez-vous ?
+    - quelle origine ?
+    - quelle nationalité ?
+    - quelle provenance ?
+    - quelle région d'origine ?
+- intent: phone_number
+  examples: |
+    - quel numéro téléphone ?
+    - quel numéro contact ?
+    - puis-je avoir numéro contact ?
+- intent: contact
+  examples: |
+    - comment puis-je contacter ?
+    - comment puis-je joindre ?
+    - quel moyen contacter ?
+    - quel moyen joindre ?
+- intent: opportunity
+  examples: |
+    - cherchez quoi maintenant ?
+    - quel objectif ?
+    - quel but ?
+    - quel objectif professionnel ?
+    - quand serez-vous disponible travailler ?
+- intent: achieve
+  examples: |
+    - pourquoi doi choisir ?
+    - pourquoi devon choisir ?
+    - pourquoi devrais choisir ?
+    - pourquoi devrions choisir ?
+    - pourquoi devrions embaucher ?
+    - qu'est-ce peut convaincre choisir ?
+    - pouvez-vous offrir ?
+    - qu'as accompli ?
+    - qu'est rend spécial ?
+    - quelles réalisations ?
+    - qu'est rend différent ?
+- intent: skills
+  examples: |
+    - quelles compétences générales ?
+    - savez faire d'autre ?
+    - quoi excellez-vous ?
+    - parlez-moi davantage compétences
+    - qu'est distingue ?
+    - quelles autres compétences ?
+    - quelles force
+- intent: project
+  examples: |
+    - quels projets avez-vous travaillé ?
+    - quels projets avez-vous réalisés ?
+    - qu'avez construit ?
+    - qu'avez créé ?
+    - qu'avez développé ?
+    - qu'avez fait ?
+    - comment pouvez-vous prouver compétences ?
+    - qu'avez fait jusqu ' présent ?
+    - pouvez-vous montrer projets ?
+    - pouvez-vous montrer réalisations ?
+    - projets ?
+    - projets ?
+    - réalisations ?
+- intent: experience
+  examples: |
+    - quelle expérience ?
+    - l'expérience ?
+    - experience ?
+    - déjà travaillé ?
+    - déjà travaillé avant ?
+    - déjà travaillé auparavant ?
+    - déjà travaillé passé ?
+    - déjà travaillé domaine ?
+    - expérience professionnelle ?
+    - expérience travail ?
+- intent: fallback
+  examples: |
+    - comprends
+    - sais
+    - peux-tu répéter ?
+    - peux-tu reformuler ?
+    - peux-tu m'expliquer ?
+    - peux-tu m'aider ?
+    - sûr
+    - certain
+    - certaine
+    - sûr comprendre
+    - tort
+    - comprenez
+    - comprenez rien
+    - sûr ?
+- intent: domain
+  examples: |
+    - quel domaine ?
+    - quel secteur ?
+    - quelle spécialité ?
+    - quelle expertise ?
+    - quelle occupation ?
+    - quel travail ?
+    - quel secteur d'activité ?
+    - quel domaine d'expertise ?
+    - quel domaine travail ?
+    - quel domaine d'activité ?
+    - quel domaine compétence ?
+    - quel domaine spécialité ?
+    - quel domaine travail choisissez-vous ?
+    - quel domaine etes spécialisé ?
+    - quel domaine etes expert ?
+    - quel domaine etes experte ?
+    - quel domaine plus confiance ?
+    - quel domaine plus compétent ?
+    - quel domaine l'aise travailler ?
+- intent: projetdetail
+  examples: |
+    - pouvez parler projets ?
+    - pouvez presenter travail ?
+    - présentez-moi projets
+    - montrez projets
+    - montrez travail
+    - pouvez montrer travail ?
+    - pouvez montrer projets ?
+    - détails projets ?
+    - détails ?
+    - presentez projet
+- intent: mobilite
+  examples: |
+    - mobile ?
+    - prêt déplacer ?
+    - prêt déplacer travail ?
+    - prêt déplacer emploi ?
+    - prêt déplacer travail ?
+    - prêt déplacer poste ?
+    - quel mobilité ?
+    - prêt bouger ?
+    - prêt déménager ?
+    - mobile
+    - mobilité
+    - où prêt travailler ?
+    - où souhaiteriez travailler ?
+    - où souhaitez travailler ?
+- intent: drive
+  examples: |
+    - permis conduire ?
+    - permis B ?
+    - véhicule ?
+    - voiture ?
+    - permis conduite
+    - conduire
+    - permis B
+    - comment déplacez-vous ?
+    - comment allez travail ?
+    - permis conduire ?
+- intent: formation
+  examples: |
+    - quelle formation ?
+    - quelle formation ?
+    - t'es quelle formation ?
+    - t'etudies quoi ?
+    - quelle formation académique ?
+    - quelle formation scolaire ?
+    - quelle universitaire ?
+    - formation initiale
+    - formation continue
+    - étudiant ?
+    - école ?
+    - quelle filière ?
+    - quelle filière ?
+    - quelle spécialité ?
+    - quel diplôme ?
+    - quelle majeure ?
+    - quelle domaine d'étude ?
+    - quelle domaine ?
+    - quelle majeure ?
+    - formation ?
+    - domaine d'étude ?
+- intent: tempFrance
+  examples: |
+    - parlez français ?
+    - parlez français ?
+    - parlez couramment français ?
+    - comprenez-vous français ?
+    - parlez anglais ?
+    - parlez anglais ?
+    - parlez couramment l'anglais ?
+    - depuis combien temp êtes-vous France ?
+    - combien langues parlez ?
+    - combien langues connaissez ?
+    - langue
+    - temp passé France
+    - quel niveau français ?
+    - quel niveau d'anglais ?
+    - niveau français
+    - niveau d'anglais
+- intent: weekend
+  examples: |
+    - peux travailler week-end ?
+    - disponible week-end ?
+    - disponible samedi ?
+    - disponible week-end ?
+    - pouvez travailler week-end ?
+- intent: age
+  examples: |
+    - quel âge
+    - quel âge ?
+    - quel âge
+    - quel age
+    - quel âge ?
+- intent: favSubject
+  examples: |
+    - quel matière préférée ?
+    - quelle matière favorite ?
+    - quelle matière préférée ?
+    - t'aime quoi comme matière ?
+    - t'aime apprendre quoi ?
+- synonym: tu
+  examples: |
+    - vous
+    - toi
+    - t'
+    - Vous
+    - Tu
+- synonym: le
+  examples: |
+    - votre
+    - ta
+    - tes
+    - Votre
+    - Ta
+    - Tes
+    - vos
+    - Vos
+    - ton
+    - la
+    - les
+    - des
+    - de
+- synonym: as
+  examples: |
+    - avez
+    - a
+    - possède
+    - possèdes
+    - possesde
+    - possedez
+    - disposes
+    - disposez
+    - dispose
+- synonym: est
+  examples: |
+    - es
+    - êtes
+    - est
+    - estes
+    - ests
+    - est-ce
+    - Est
+    - Êtes
+- synonym: stage
+  examples: |
+    - opportunité
+    - professionel
+    - professionnelle
+    - emploi
+    - orientation
+    - poste
+- synonym: projet
+  examples: |
+    - travail
+    - réalisation
+    - création
+    - développement
+    - projet
+    - projets
+    - réalisations
+    - créations
+    - développements
+    - travaux
+- synonym: faire
+  examples: |
+    - accomplir
+    - réaliser
+    - construire
+    - créer
+    - développer
+    - faire
+    - effectuer
+    - exécuter
+    - traiter
+    - travailler
+    - fais
+    - faites
+    - travaille
+- synonym: compétence
+  examples: |
+    - talent
+    - capacité
+    - capacite
+    - aptitude
+    - habileté
+    - savoir-faire
+    - competence
+    - compétences
+    - compétent
+    - compétente
+    - compétents
+    - compétentes
+    - competences
+    - atout
+    - atouts
+    - point fort
+    - points forts
+    - force
+    - forces
+- synonym: peux
+  examples: |
+    - peut-être
+    - pouvez
+    - pourrais
+    - pourriez
+    - peut
+    - as capacité
+    - as capacite
+    - avez capacité
+    - est capable
+    - etes capable
+    - êtes capable
+    - acceptes
+    - acceptez

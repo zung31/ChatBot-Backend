@@ -1,0 +1,371 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - good morning
+    - good evening
+    - good afternoon
+- intent: respondgreet
+  examples: |
+    - 'm fine . ?
+    - 'm good . ?
+    - 'm great . ?
+    - 'm fine thank . ?
+- intent: goodbye
+  examples: |
+    - cu
+    - good bye
+    - cee later
+    - good night
+    - bye
+    - goodbye
+    - nice day
+    - see around
+    - bye bye
+    - see later
+    - 'll keep touch
+    - good
+    - great
+    - nice
+    - thank
+- intent: affirm
+  examples: |
+    - yes
+    - 
+    - indeed
+    - course
+    - sound good
+    - correct
+- intent: deny
+  examples: |
+    - 
+    - n
+    - never
+    - n't think
+    - n't like
+    - way
+    - really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - wonderful
+    - feeling good
+    - great
+    - amazing
+    - super stoked
+    - extremely good
+    - good
+    - perfect
+- intent: mood_unhappy
+  examples: |
+    - disappointed
+    - super sad
+    - 'm sad
+    - sad
+    - sad
+    - unhappy
+    - good
+    - good
+    - extremly sad
+    - saad
+    - sad
+- intent: mood_happy
+  examples: |
+    - happy
+    - feeling happy
+    - happy
+    - happy
+    - extremely happy
+    - good mood
+    - feeling great
+    - feeling wonderful
+    - feeling amazing
+    - feeling fantastic
+- intent: bot_challenge
+  examples: |
+    - bot ?
+    - human ?
+    - talking bot ?
+    - talking human ?
+- intent: introduce_self
+  examples: |
+    - introduce
+    - ?
+    - tell
+    - introduce ?
+    - name ?
+    - 's name ?
+    - talking ?
+    - tell ?
+    - please introduce
+    - tell
+- intent: show_more
+  examples: |
+    - programming language ​​do know ?
+    - ?
+    - skill ?
+    - capable ?
+    - ability ?
+    - tell skill
+    - tell
+    - tell
+    - ?
+    - else ?
+    - strength ?
+- intent: personal
+  examples: |
+    - family ?
+    - show social medium account
+    - child ?
+    - family ?
+    - child ?
+    - partner ?
+    - desired salary ?
+    - much earn ?
+    - much want earn ?
+    - salary
+    - salary expectation ?
+    - salary expected ?
+- intent: adresse
+  examples: |
+    - live ?
+    - address ?
+    - house ?
+    - home ?
+    - location ?
+    - located ?
+    - reside ?
+- intent: origin
+  examples: |
+    - ?
+    - ethnicity ?
+    - come ?
+    - nationality ?
+    - background ?
+    - heritage ?
+    - origin ?
+- intent: phone_number
+  examples: |
+    - phone number ?
+    - phone number ?
+    - contact number ?
+    - contact number ?
+    - reach phone ?
+    - mobile number ?
+    - cell number ?
+    - phone number
+- intent: contact
+  examples: |
+    - contact ?
+    - contact ?
+    - reach ?
+    - reach ?
+    - get touch ?
+    - communicate ?
+    - get ahold ?
+    - contact information
+- intent: opportunity
+  examples: |
+    - looking ?
+    - looking ?
+    - looking ?
+    - looking ?
+    - searching ?
+    - looking job ?
+    - looking internship ?
+    - looking project ?
+    - looking collaboration
+    - opportunity seeking
+    - kind job looking
+    - kind internship looking
+    - available work
+    - would available work
+- intent: achieve
+  examples: |
+    - choose ?
+    - hire ?
+    - convince choose ?
+    - offer ?
+    - achieved ?
+    - accomplished ?
+    - make special ?
+    - achievement ?
+    - make different ?
+- intent: skills
+  examples: |
+    - soft skill ?
+    - else ?
+    - good ?
+    - tell soft skill
+    - make stand ?
+    - strengh
+- intent: project
+  examples: |
+    - project worked ?
+    - project done ?
+    - built ?
+    - created ?
+    - developed ?
+    - done ?
+    - proof skill ?
+    - done far ?
+    - worked ?
+    - show project ?
+    - show work ?
+    - project ?
+    - project ?
+    - talk projet current
+    - present project
+- intent: experience
+  examples: |
+    - experience ?
+    - experience ?
+    - worked ?
+    - previous experience ?
+    - industry ?
+- intent: fallback
+  examples: |
+    - sorry .
+    - understand .
+    - repeat ?
+    - say ?
+    - get .
+    - say ?
+    - understand .
+    - get .
+    - 're wrong .
+    - 're mistaken .
+    - understand .
+    - get .
+    - n't make sense .
+- intent: domain
+  examples: |
+    - domain ?
+    - field ?
+    - area expertise ?
+    - specialty ?
+    - occupation ?
+    - work ?
+    - sector ?
+    - line work ?
+    - line business ?
+    - line expertise ?
+    - line profession ?
+    - line occupation ?
+    - line industry ?
+    - line sector ?
+    - area skilled ?
+    - area experienced ?
+    - area confident ?
+    - area like ?
+    - area work ?
+- intent: projetdetail
+  examples: |
+    - tell project ?
+    - tell work ?
+    - present project
+    - show project
+    - tell work
+    - see project ?
+    - see work ?
+    - present project ?
+    - project ?
+    - project detail ?
+    - detail project ?
+    - detail ?
+- intent: mobilite
+  examples: |
+    - willing move ?
+    - willing relocate ?
+    - willing travel ?
+    - willing move another city ?
+    - willing move another country ?
+    - willing move another region ?
+    - willing move another place ?
+    - mobility ?
+    - mobile ?
+    - mobility
+    - move
+    - would move South France ?
+    - would move Paris ?
+    - would move another country ?
+    - would move another city ?
+- intent: drive
+  examples: |
+    - driver 's license ?
+    - driving license ?
+    - vehicle ?
+    - car ?
+    - driving license
+    - driver 's license
+    - drive ?
+    - drive ?
+    - go work ?
+- intent: formation
+  examples: |
+    - studying ?
+    - major ?
+    - field study ?
+    - degree ?
+    - major ?
+    - student ?
+    - school ?
+    - major
+    - field study
+- intent: tempFrance
+  examples: |
+    - speak French ?
+    - speak French ?
+    - fluent French ?
+    - understand French ?
+    - speak English ?
+    - speak English ?
+    - fluent English ?
+    - long France ?
+    - many language speak ?
+    - many language know ?
+    - language
+    - time France
+    - level French ?
+    - level English ?
+    - french level
+    - english level
+- intent: weekend
+  examples: |
+    - available work week-end
+    - available work Saturday
+    - work week-end
+    - would able work week-end
+    - would accept work week-end
+- intent: age
+  examples: |
+    - old ?
+    - age ?
+    - born ?
+    - birthdate ?
+- intent: favSubject
+  examples: |
+    - favorite subject ?
+    - favorite subject ?
+    - subject like ?
+    - subject prefer ?
+    - subject enjoy ?
+    - subject love ?
+    - subject like best ?
+    - subject prefer ?
+    - subject enjoy best ?
+    - subject love best ?
+    - like learn ?
+- synonym: experience
+  examples: |
+    - experience professional
+    - professional experience
+    - experiences
+    - work experience
+    - worked
+    - experienced

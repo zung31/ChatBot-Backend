@@ -2,14 +2,33 @@ version: "3.1"
 
 stories:
 
-- story: set language
+- story: set language to French
   steps:
+  - intent: set_language
+    entities:
+    - entity: user_language
+      value: "fr"
   - action: action_set_language
+
+- story: set language to English
+  steps:
+  - intent: set_language
+    entities:
+    - entity: user_language
+      value: "en"
+  - action: action_set_language
+
+- story: find most similar intent
+  steps:
+  - intent: find_most_similar_intent
+  - action: action_find_most_similar_intent
 
 - story: happy path
   steps:
   - intent: greet
   - action: utter_greet
+  - intent: respondgreet
+  - action: utter_respondgreet
   - intent: mood_great
   - action: utter_happy
 
@@ -125,3 +144,33 @@ stories:
   steps:
   - intent: tempFrance
   - action: utter_tempFrance
+
+- story: weekend path
+  steps:
+  - intent: weekend
+  - action: utter_weekend
+
+- story: age path
+  steps:
+  - intent: age
+  - action: utter_age
+
+- story: favSubject path
+  steps:
+  - intent: favSubject
+  - action: utter_favSubject
+
+- story: non_remunere
+  steps:
+  - intent: non_remunere
+  - action: utter_non_remunere
+
+- story: lieu_travail
+  steps:
+  - intent: lieu_travail
+  - action: utter_lieu_travail
+
+- story: creneau_dispo
+  steps:
+  - intent: creneau_dispo
+  - action: utter_creneau_dispo

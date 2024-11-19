@@ -1,6 +1,15 @@
 version: "3.1"
 
 nlu:
+- synonym: experience
+  examples: |
+    - experience professional
+    - professional experience
+    - experiences
+    - work experience
+    - worked
+    - experienced
+
 - intent: greet
   examples: |
     - hey
@@ -9,6 +18,13 @@ nlu:
     - good morning
     - good evening
     - good afternoon
+
+- intent: respondgreet
+  examples: |
+    - i'm fine. and you?
+    - i'm good. and you?
+    - i'm great. and you?
+    - i'm fine thank you. and you?
 
 - intent: goodbye
   examples: |
@@ -23,6 +39,10 @@ nlu:
     - bye bye
     - see you later
     - we'll keep in touch
+    - good
+    - great
+    - nice
+    - thank you
 
 - intent: affirm
   examples: |
@@ -73,16 +93,16 @@ nlu:
 
 - intent: mood_happy 
   examples: |
-    - I am happy
-    - I am feeling happy
-    - I am very happy
-    - I am so happy
-    - I am extremely happy
-    - I am in a good mood
-    - I am feeling great
-    - I am feeling wonderful
-    - I am feeling amazing
-    - I am feeling fantastic
+    - i am happy
+    - i am feeling happy
+    - i am very happy
+    - i am so happy
+    - i am extremely happy
+    - i am in a good mood
+    - i am feeling great
+    - i am feeling wonderful
+    - i am feeling amazing
+    - i am feeling fantastic
 
 - intent: bot_challenge
   examples: |
@@ -93,258 +113,317 @@ nlu:
 
 - intent: introduce_self
   examples: |
-    - Introduce yourself
-    - Who are you?
-    - Tell me about yourself
-    - Can you introduce yourself?
-    - What is your name?
-    - What's your name?
-    - Who am I talking to?
-    - Can you tell me who you are?
-    - Please introduce yourself
-    - Can you tell me who you are?
+    - introduce yourself
+    - who are you?
+    - tell me about yourself
+    - can you introduce yourself?
+    - what is your name?
+    - what's your name?
+    - who am I talking to?
+    - can you tell me who you are?
+    - please introduce yourself
+    - can you tell me who you are?
     - can you tell me who you are
 
 - intent: show_more
   examples: |
-    - What programming languages ​​do you know?
-    - What can you do?
-    - What are your skills?
-    - What are you capable of?
-    - What are your abilities?
-    - Tell me more about your skills
-    - Tell me more
-    - Tell me more about you
-    - What can you do for me?
-    - What else can you do?
-    - What are your strengths?
+    - what programming languages ​​do you know?
+    - what can you do?
+    - what are your skills?
+    - what are you capable of?
+    - what are your abilities?
+    - tell me more about your skills
+    - tell me more
+    - tell me more about you
+    - what can you do for me?
+    - what else can you do?
+    - what are your strengths?
 
 - intent: personal
   examples: |
-    - Where is your family?
-    - Show me your social media account
-    - Do you have children?
-    - Do you have a family?
-    - Do you have any children?
-    - Do you have a partner?
-    - What is your desired salary?
-    - How much do you earn?
-    - How much do you want to earn?
-    - Salary
-    - What are your salary expectations?
-    - What are your salary expected?
+    - where is your family?
+    - show me your social media account
+    - do you have children?
+    - do you have a family?
+    - do you have any children?
+    - do you have a partner?
+    - what is your desired salary?
+    - how much do you earn?
+    - how much do you want to earn?
+    - salary
+    - what are your salary expectations?
+    - what are your salary expected?
 
 - intent: adresse
   examples: |
-    - Where do you live?
-    - What is your address?
-    - Where is your house?
-    - Where is your home?
-    - What is your location?
-    - Where are you located?
-    - Where do you reside?
+    - where do you live?
+    - what is your address?
+    - where is your house?
+    - where is your home?
+    - what is your location?
+    - where are you located?
+    - where do you reside?
 
 - intent: origin
   examples: |
-    - Where are you from?
-    - What is your ethnicity?
-    - Where do you come from?
-    - What is your nationality?
-    - What is your background?
-    - What is your heritage?
-    - What is your origin?
+    - where are you from?
+    - what is your ethnicity?
+    - where do you come from?
+    - what is your nationality?
+    - what is your background?
+    - what is your heritage?
+    - what is your origin?
 
 - intent: phone_number
   examples: |
-    - What is your phone number?
-    - Can I have your phone number?
-    - What is your contact number?
-    - Can I have your contact number?
-    - How can I reach you by phone?
-    - What is your mobile number?
-    - What is your cell number?
+    - what is your phone number?
+    - can i have your phone number?
+    - what is your contact number?
+    - can i have your contact number?
+    - how can i reach you by phone?
+    - what is your mobile number?
+    - what is your cell number?
     - phone number
 
 - intent: contact
   examples: |
-    - How can I contact you?
-    - Can I contact you?
-    - How can I reach you?
-    - Can I reach you?
-    - How can I get in touch with you?
-    - How can I communicate with you?
-    - How can I get ahold of you?
+    - how can i contact you?
+    - can i contact you?
+    - how can i reach you?
+    - can i reach you?
+    - how can i get in touch with you?
+    - how can i communicate with you?
+    - how can i get ahold of you?
     - contact information
 
 - intent: opportunity
   examples: |
     - What are you looking for?
-    - What are you searching for?
-    - Are you looking for a job?
-    - Are you looking for an internship?
-    - Are you looking for a project?
-    - Are you looking for a collaboration?
-    - What opportunities are you seeking?
-    - What kind of job are you looking for?
-    - What kind of internship are you looking for?
-    - When will you available to work?
+    - What are you looking for now?
+    - what are you looking for?
+    - what are you looking for now?
+    - what are you searching for?
+    - are you looking for a job?
+    - are you looking for an internship?
+    - are you looking for a project?
+    - are you looking for a collaboration 
+    - what opportunities are you seeking 
+    - what kind of job are you looking for 
+    - what kind of internship are you looking for 
+    - when will you available to work 
+    - when and where would you are available to work
 
 - intent: achieve
   examples: |
-    - Why should i choose you?
-    - Why should we hire you?
-    - What can convince me to choose you?
-    - What can you offer?
-    - What have you achieved?
-    - What have you accomplished?
-    - What makes you special?
-    - What are your achievements?
-    - What makes you different?
+    - why should i choose you?
+    - why should we hire you?
+    - what can convince me to choose you?
+    - what can you offer?
+    - what have you achieved?
+    - what have you accomplished?
+    - what makes you special?
+    - what are your achievements?
+    - what makes you different?
 
 - intent: skills
   examples: |
-    - What are your soft skills?
-    - What else can you do?
-    - What are you good at?
-    - Tell me more about your soft skills
-    - What makes you stand out?
+    - what are your soft skills?
+    - what else can you do?
+    - what are you good at?
+    - tell me more about your soft skills
+    - what makes you stand out?
+    - what are your strengh
 
 - intent: project
   examples: |
-    - What projects have you worked on?
-    - What projects have you done?
-    - What have you built?
-    - What have you created?
-    - What have you developed?
-    - What have you done?
-    - How can you proof your skills?
-    - What have you done so far?
-    - What have you worked on?
-    - Can you show me your projects?
-    - Can you show me your work?
-    - Do you have any projects?
-    - Projects?
+    - what projects have you worked on?
+    - what projects have you done?
+    - what have you built?
+    - what have you created?
+    - what have you developed?
+    - what have you done?
+    - how can you proof your skills?
+    - what have you done so far?
+    - what have you worked on?
+    - can you show me your projects?
+    - can you show me your work?
+    - do you have any projects?
+    - projects?
+    - talk about your projet current
 
 - intent: experience
   examples: |
-    - What is your experience?
-    - Do you have any experience?
-    - Have you worked before?
-    - Previous experience?
-    - Have you been in the industry before?
+    - what is your experience?
+    - do you have any experience?
+    - have you worked before?
+    - previous experience?
+    - have you been in the industry before?
 
 - intent: fallback
   examples: |
-    - I am sorry.
-    - I do not understand you.
-    - Can you repeat that?
-    - What did you say?
-    - I did not get that.
-    - Can you say that again?
-    - I did not understand that.
-    - I did not get you.
-    - You're wrong.
-    - You're mistaken.
-    - You do not understand.
-    - You do not get it.
-    - You don't make any sense.
+    - i am sorry.
+    - i do not understand you.
+    - can you repeat that?
+    - what did you say?
+    - i did not get that.
+    - can you say that again?
+    - i did not understand that.
+    - i did not get you.
+    - you're wrong.
+    - you're mistaken.
+    - you do not understand.
+    - you do not get it.
+    - you don't make any sense.
 
 - intent: domain
   examples: |
-    - What is your domain?
-    - What is your field?
-    - What is your area of expertise?
-    - What is your specialty?
-    - What is your occupation?
-    - What is your work?
-    - What is your sector?
-    - What is your line of work?
-    - What is your line of business?
-    - What is your line of expertise?
-    - What is your line of profession?
-    - What is your line of occupation?
-    - What is your line of industry?
-    - What is your line of sector?
-    - What area are you most skilled in?
-    - What area are you most experienced in?
-    - What area are you most confident in?
-    - What area do you like the most?
-    - What area do you work?
+    - what is your domain?
+    - what is your field?
+    - what is your area of expertise?
+    - what is your specialty?
+    - what is your occupation?
+    - what is your work?
+    - what is your sector?
+    - what is your line of work?
+    - what is your line of business?
+    - what is your line of expertise?
+    - what is your line of profession?
+    - what is your line of occupation?
+    - what is your line of industry?
+    - what is your line of sector?
+    - what area are you most skilled in?
+    - what area are you most experienced in?
+    - what area are you most confident in?
+    - what area do you like the most?
+    - what area do you work?
 
 - intent: projetdetail
   examples: |
-    - Can you tell me more about your projects?
-    - Can you tell me more about your work?
-    - Present your projects to me
-    - Show me more about your projects
-    - Tell me more your work
-    - Can i see your projects?
-    - Can i see your work?
-    - Can you present your projects to me?
-    - Some of your projects?
-    - Projects details?
-    - Details of your projects?
-    - Details?
+    - can you tell me more about your projects?
+    - can you tell me more about your work?
+    - present your projects to me
+    - show me more about your projects
+    - tell me more your work
+    - can i see your projects?
+    - can i see your work?
+    - can you present your projects to me?
+    - some of your projects?
+    - projects details?
+    - details of your projects?
+    - details?
 
 - intent: mobilite
   examples: |
-    - Are you willing to move?
-    - Are you willing to relocate?
-    - Are you willing to travel?
-    - Are you willing to move to another city?
-    - Are you willing to move to another country?
-    - Are you willing to move to another region?
-    - Are you willing to move to another place?
-    - What is your mobility?
-    - Are you mobile?
-    - Mobility
-    - Move
-    - Would you move to South of France?
-    - Would you move to Paris?
-    - Would you move to another country?
-    - Would you move to another city?
+    - are you willing to move?
+    - are you willing to relocate?
+    - are you willing to travel?
+    - are you willing to move to another city?
+    - are you willing to move to another country?
+    - are you willing to move to another region?
+    - are you willing to move to another place?
+    - what is your mobility?
+    - are you mobile?
+    - mobility
+    - move
+    - would you move to South of France?
+    - would you move to Paris?
+    - would you move to another country?
+    - would you move to another city?
 
 - intent: drive
   examples: |
-    - Do you have a driver's license?
-    - Do you have a driving license?
-    - Do you have a vehicle?
-    - Do you have a car?
-    - Driving license
-    - Driver's license
-    - How do you drive?
-    - Can you drive?
-    - How do you go to work?
+    - do you have a driver's license?
+    - do you have a driving license?
+    - do you have a vehicle?
+    - do you have a car?
+    - driving license
+    - driver's license
+    - how do you drive?
+    - can you drive?
+    - how do you go to work?
 
 - intent: formation
   examples: |
-    - What are you studying?
-    - What is your major?
-    - What is your field of study?
-    - What is your degree?
-    - What major are you in?
-    - Are you a student?
-    - Are you in school?
+    - what are you studying?
+    - what is your major?
+    - what is your field of study?
+    - what is your degree?
+    - what major are you in?
+    - are you a student?
+    - are you in school?
     - your major
     - field of study
 
 - intent: tempFrance
   examples: |
-    - Can you speak French?
-    - Do you speak French?
-    - Are you fluent in French?
-    - Can you understand French?
-    - Can you speak English?
-    - Do you speak English?
-    - Are you fluent in English?
-    - How long have you been in France?
-    - How many languages do you speak?
-    - How many languages do you know?
+    - can you speak French?
+    - do you speak French?
+    - are you fluent in French?
+    - can you understand French?
+    - can you speak English?
+    - do you speak English?
+    - are you fluent in English?
+    - how long have you been in France?
+    - how many languages do you speak?
+    - how many languages do you know?
     - language
     - time in France
-    - What is your level of French ?
-    - What is your level of English ?
-    - French level
-    - English level
+    - what is your level of French ?
+    - what is your level of English ?
     - french level
     - english level
+
+- intent: weekend
+  examples: |
+    - are you available to work on week-end
+    - are you available to work on Saturday
+    - can you work on week-end
+    - would you able to work on week-end
+    - would you accept to work on week-end
+
+- intent: age
+  examples: |
+    - how old are you?
+    - what is your age?
+    - when were you born?
+    - what is your birthdate?
+
+- intent: favSubject
+  examples: |
+    - what is your favorite subject?
+    - what your favorite subject?
+    - what subject do you like the most?
+    - what subject do you prefer?
+    - what subject do you enjoy the most?
+    - what subject do you love the most?
+    - what subject do you like the best?
+    - what subject do you prefer the most?
+    - what subject do you enjoy the best?
+    - what subject do you love the best?
+    - what do you like to learn?
+
+- intent: non_remunere
+  examples: |
+    - are you looking for a paid job?
+    - are you looking for a paid internship?
+    - are you looking for a paid project?
+    - are you looking for a paid collaboration?
+    - are you looking for a paid position?
+    - are you looking for a paid work?
+    - can you work for free?
+    - can you do an unpaid internship?
+
+- intent: lieu_travail
+  examples: |
+    - can you work from home?
+    - can you work remotely?
+    - can you work from Paris?
+    - can you do internships in Paris?
+  
+- intent: creneau_dispo
+  examples: |
+    - when are you available?
+    - when can we contact you?
+    - when can we reach you?
+    - would you be able to discuss this week?
+    - would you like to have an interview this week?

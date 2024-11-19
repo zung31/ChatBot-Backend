@@ -2,6 +2,22 @@ version: "3.1"
 
 rules:
 
+- rule: Set language to French
+  steps:
+  - intent: set_language
+    entities:
+    - entity: user_language
+      value: "fr"
+  - action: action_set_language
+
+- rule: Set language to English
+  steps:
+  - intent: set_language
+    entities:
+    - entity: user_language
+      value: "en"
+  - action: action_set_language
+
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
@@ -16,3 +32,8 @@ rules:
   steps:
   - intent: nlu_fallback
   - action: action_default_fallback
+
+- rule: Find most similar intent
+  steps:
+  - intent: find_most_similar_intent
+  - action: action_find_most_similar_intent
